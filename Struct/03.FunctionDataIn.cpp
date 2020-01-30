@@ -4,19 +4,33 @@
 
 using namespace std;
 
-/*
-typedef struct{
-	int id;
-	char key;
-}HELLOSTRUCT;
-*/
 
 typedef struct STUDENT{
 	int id;
 	string name;
 	string surname;
 	double grade;	
+	
+	STUDENT(){
+		cin>>this->id;
+		cin>>this->name;
+		cin>>this->surname;
+		cin>>this->grade;	
+	};
+	~STUDENT(){
+	
+	}
 };
+
+
+/*
+typedef struct STUDENT{
+	int id;
+	string name;
+	string surname;
+	double grade;	
+};
+*/
 
 /*
 void getStudent(){
@@ -34,10 +48,18 @@ STUDENT getStudent(){
 	return student;	
 }
 
+
 int main(void){
 
-	STUDENT myStudent=getStudent();
-		
-	cout<<"Student Id "<<myStudent.id<<" Name "<<myStudent.name<<" Surname "<<myStudent.surname<<" Grade "<<myStudent.grade<<endl;
+	STUDENT *myStudent=new STUDENT();
+	
+	cout<<"Student Id "<<myStudent->id<<" Name "<<myStudent->name<<" Surname "<<myStudent->surname<<" Grade "<<myStudent->grade<<endl;	
+	
+	cin>>myStudent->id;
+	cout<<"Student Id "<<myStudent->id<<" Name "<<myStudent->name<<" Surname "<<myStudent->surname<<" Grade "<<myStudent->grade<<endl;
+	
+	delete myStudent;
+	
+	
 	
 }
