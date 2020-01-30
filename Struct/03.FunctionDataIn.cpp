@@ -11,16 +11,18 @@ typedef struct STUDENT{
 	string surname;
 	double grade;	
 	
-	STUDENT(){
+	STUDENT();
+	~STUDENT(){
+	
+	}
+};
+
+	STUDENT::STUDENT(){
 		cin>>this->id;
 		cin>>this->name;
 		cin>>this->surname;
 		cin>>this->grade;	
 	};
-	~STUDENT(){
-	
-	}
-};
 
 
 /*
